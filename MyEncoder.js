@@ -18,6 +18,10 @@ MyEncoder.prototype.getRounds = function(){
   return Math.floor(step / this.HOLES);
 };
 
+MyEncoder.prototype.clearRounds = function(){
+  step = 0;
+};
+
 exports.connect = function(pina, pinb, holes) {
   return new MyEncoder(pina, pinb, holes);
 };
