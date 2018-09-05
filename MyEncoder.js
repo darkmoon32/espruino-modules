@@ -11,7 +11,7 @@ function MyEncoder(pina, pinb, holes) {
   this.PINB = pinb;
   this.angleOneStep = 360 / holes;
   this.Encoder = require("Encoder").connect(pina, pinb,function (direction) {
-    step++;
+    step += direction;
   });
 }
 
